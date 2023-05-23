@@ -1,0 +1,12 @@
+.image {
+    @apply w-[300px] h-[300px] rounded-2xl;
+
+}
+
+.image img {
+    @apply w-full h-full object-contain overflow-hidden;
+}
+
+.product {
+    @apply mt-10 w-[350px];
+}

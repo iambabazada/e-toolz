@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom'
 const PromotionProduct = () => {
     const dispatch = useDispatch()
 
-    const { products } = useSelector(state => state.products) || []
+    const { products, loading } = useSelector(state => state.products) || []
 
     useEffect(() => {
         dispatch(getProducts())
@@ -20,6 +20,12 @@ const PromotionProduct = () => {
             <Title name="offers & promotions" title="Offers & Promotion Products" desc="lorem inpus" btn />
 
             <div className='flex justify-between flex-wrap'>
+                {loading &&
+                    <div className="spinner-container">
+                        <div className="loading-spinner">
+                        </div>
+                    </div>
+                }
                 {products?.map((product, i) => (
                     <Link>
                         <ProductCard key={i} product={product} />

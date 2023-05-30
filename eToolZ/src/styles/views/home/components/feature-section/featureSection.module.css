@@ -1,0 +1,12 @@
+.image {
+    @apply w-full h-[640px] rounded-xl overflow-hidden
+}
+
+.image img {
+    @apply w-full h-full object-cover;
+
+}
+
+.content {
+    @apply flex flex-col gap-5
+}

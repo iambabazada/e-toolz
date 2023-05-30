@@ -11,7 +11,7 @@ import ProductCard from '@src/component/product-card/ProductCard'
 const TrandingProduct = () => {
     const dispatch = useDispatch()
 
-    const { products } = useSelector(state => state.products) || []
+    const { products, loading } = useSelector(state => state.products) || []
 
     useEffect(() => {
         dispatch(getProducts())
@@ -25,7 +25,12 @@ const TrandingProduct = () => {
             </div>
 
             <div className="flex flex-wrap justify-between">
-
+                {loading &&
+                    <div className="spinner-container">
+                        <div className="loading-spinner">
+                        </div>
+                    </div>
+                }
                 {products?.map((product, index) => (
                     <Link to="#">
                         <ProductCard key={index} product={product} />

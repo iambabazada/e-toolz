@@ -33,7 +33,7 @@ const Footer = () => {
                 <ul className='flex gap-5'>
                     {links.map((link, index) => (
                         <li key={index}>
-                            <Link to={link.path}>{link.title}</Link>
+                            <a href={link.path}>{link.title}</a>
                         </li>
                     ))}
                 </ul>

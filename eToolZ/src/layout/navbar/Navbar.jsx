@@ -35,9 +35,9 @@ const Navbar = () => {
                     <ul className='flex gap-4'>
                         {links.map((link, i) => (
                             <li key={i} className='font-medium'>
-                                <Link to={link?.url}>
+                                <a href={link?.url}>
                                     {link.name}
-                                </Link>
+                                </a>
                             </li>
                         ))}
                     </ul>

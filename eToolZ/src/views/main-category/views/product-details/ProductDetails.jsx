@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import { getProductDetail } from '../../../../redux/productSlice'
 import { useDispatch, useSelector } from 'react-redux'
 import Button from '@src/component/button/Button'
+import { addToBasket } from '../../../../redux/basketSlice'
 
 const ProductDetails = () => {
     const { id } = useParams()
@@ -15,6 +16,9 @@ const ProductDetails = () => {
         console.log(product);
     }, [id])
 
+    const handleAddToCart = () => {
+        dispatch(addToBasket(product))
+    }
     return (
         <main>
             <div className="flex gap-24 justify-between">
@@ -32,7 +36,7 @@ const ProductDetails = () => {
                             size='lg'
                             rounded
                             className='w-full'
-
+                            onClick={handleAddToCart}
                         >
                             Add to cart
                         </Button>

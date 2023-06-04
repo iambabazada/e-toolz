@@ -1,0 +1,21 @@
+.overlay {
+    @apply fixed top-0 left-0 bg-black w-full h-full bg-opacity-10 z-50;
+
+
+}
+
+.modal {
+    @apply bg-white h-[600px] w-[400px] absolute top-[90px] right-[70px] rounded-lg p-4;
+}
+
+.cartItem {
+    @apply flex items-center mt-3 gap-4;
+}
+
+.cartItemImg {
+    @apply w-[100px] h-[100px];
+}
+
+.cartItemImg img {
+    @apply w-full h-full object-cover;
+}

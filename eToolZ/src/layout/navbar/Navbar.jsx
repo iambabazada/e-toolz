@@ -2,10 +2,16 @@ import React from 'react'
 import { ReactComponent as AppLogo } from '@src/assets/brand.svg'
 import { Link } from 'react-router-dom'
 import Button from '@src/component/button/button'
+import { useDispatch, useSelector } from 'react-redux'
+import { openBasket } from '../../redux/basketSlice'
+import Basket from '../basket/Basket'
 
 
 
 const Navbar = () => {
+
+    const dispatch = useDispatch()
+
     const links = [
         {
             name: 'Home',
@@ -25,8 +31,20 @@ const Navbar = () => {
         },
     ]
 
+    const cartShow = useSelector(state => state.basket.isBasketOpen)
+
+    const handleCart = () => {
+        dispatch(openBasket(true))
+    }
+
+    const totalCount = useSelector(state => state.basket.totalCount)
+
+
     return (
         <header className='mt-2 relative z-50'>
+            {cartShow && (
+                <Basket />
+            )}
             <div className="flex items-center justify-between">
                 <div>
                     <AppLogo className="w-[200px]" />
@@ -42,8 +60,8 @@ const Navbar = () => {
                         ))}
                     </ul>
                     <div className="cart">
-                        <Button rounded size="sm" variant="outline" >
-                            cart {0}
+                        <Button rounded size="sm" onClick={handleCart} variant="outline" >
+                            cart <span className='text-primary'>{totalCount}</span>
                         </Button>
                     </div>
                 </nav>

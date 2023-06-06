@@ -7,13 +7,13 @@ import Apply from '@src/component/apply/Apply'
 
 const Home = () => {
     return (
-        <div>
+        <main>
             <Hero />
             <TrandingProduct />
             <PromotionProduct />
             <FeatureSection />
             <Apply />
-        </div>
+        </main>
     )
 }
 

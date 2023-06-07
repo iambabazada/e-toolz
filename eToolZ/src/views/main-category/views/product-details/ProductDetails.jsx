@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { getProductDetail } from '../../../../redux/productSlice'
 import { useDispatch, useSelector } from 'react-redux'
-import Button from '@src/component/button/Button'
+import Button from '@src/component/button/button'
 import { addToBasket } from '../../../../redux/basketSlice'
 
 const ProductDetails = () => {

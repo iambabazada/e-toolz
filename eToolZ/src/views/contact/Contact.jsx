@@ -3,7 +3,7 @@ import ContactUs from './contactUs/ContactUs'
 import { BiMessage } from 'react-icons/bi'
 import { BiPhoneCall } from 'react-icons/bi'
 import { BiLocationPlus } from 'react-icons/bi'
-import ContactInfo from './contactUs/contactInfo'
+import ContactInfo from './contactUs/ContactInfo'
 
 const Contact = () => {
     const contactInfo = [

@@ -25,8 +25,8 @@ const ContactUs = () => {
         validationSchema: validationSchema
     });
     return (
-        <section className='flex gap-16 mt-12'>
-            <div className="w-1/2">
+        <section className='flex gap-16 max-[768px]:flex-col mt-12'>
+            <div className="w-1/2 max-[768px]:w-full">
                 <h1 className='text-3xl text-textColor font-bold'>
                     Contact Us
                 </h1>
@@ -82,8 +82,8 @@ const ContactUs = () => {
                     <Button variant="primary" size="lg" rounded type="submit">Submit</Button>
                 </form>
             </div>
-            <div className="w-1/2 h-[600px]">
-                <img className='w-full h-full' src={ContactImg} alt="" />
+            <div className="w-1/2 h-[600px] max-[768px]:w-full">
+                <img className='w-full h-full object-cover' src={ContactImg} alt="" />
             </div>
         </section>
     )

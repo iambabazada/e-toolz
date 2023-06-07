@@ -33,7 +33,7 @@ const Contact = () => {
     return (
         <main>
             <ContactUs />
-            <section className='flex gap-8 mt-32'>
+            <section className='flex gap-8 max-[768px]:flex-col mt-32'>
                 {contactInfo.map((item, index) => (
                     <a href={item.url} target='_blank'>
                         <ContactInfo data={item} />

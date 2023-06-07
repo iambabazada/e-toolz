@@ -47,7 +47,7 @@ const Team = () => {
         speed: 2000,
         autoplaySpeed: 5000,
         cssEase: "linear",
-        slidesToShow: 4,
+        slidesToShow: 3,
         slidesToScroll: 1,
         // prevArrow: <PrevArrow />,
         // nextArrow: <NextArrow />,
@@ -84,7 +84,7 @@ const Team = () => {
             <h1>
                 Team
             </h1>
-            <Slider {...settings} className='flex gap-6'>
+            <Slider {...settings} >
                 {users.map((user, index) => (
                     <UserCard key={index} user={user} />
                 ))}

@@ -1,7 +1,7 @@
 import React from 'react'
 import featureImg from '@src/assets/images/feature.jpg'
 import styles from '@src/styles/views/home/components/feature-section/featureSection.module.css'
-import { ReactComponent as ListIcon } from '@src/assets/icons/icon/list.svg'
+import { ReactComponent as ListIcon } from '@src/assets/icons/Icon/list.svg'
 
 const FeatureSection = () => {
     return (

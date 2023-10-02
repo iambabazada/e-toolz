@@ -1,7 +1,7 @@
 import { useFormik } from 'formik';
 import React from 'react'
 import ContactImg from '@src/assets/images/contact.jpg'
-import Button from '@src/component/button/Button'
+import Button from '@src/component/button/button'
 import * as Yup from 'yup';
 
 const validationSchema = Yup.object({

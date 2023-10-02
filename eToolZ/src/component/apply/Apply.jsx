@@ -1,5 +1,5 @@
 import React from 'react'
-import Button from '@src/component/button/Button'
+import Button from '@src/component/Button/Button'
 
 const Apply = () => {
     return (

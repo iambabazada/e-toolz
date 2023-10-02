@@ -5,7 +5,7 @@ const Apply = () => {
     return (
         <section className='flex mb-10 flex-col gap-5 items-center mt-[150px]'>
             <h1 className='text-5xl font-bold'>
-                Subscribe
+                Subscribed
             </h1>
             <p>
                 You can stay up to date with our news by subscribing to us
